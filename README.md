@@ -2,7 +2,7 @@
 Portfolio Project for "Introduction to Programming 101" Course on Codecademy. 
 
 Brainstorm : 
-  * A .txt file containing the same word bank as the original NYT Wordle Game
+	* A .txt file containing the same word bank as the original NYT Wordle Game
 	* multiple functions
 	* first function initialises the game, welcomes the player, and picks a word at random from the word bank, which is on a differnet file. It saves it to a variable.  
 	* Main Menu with 3 different options, "Play the game", which runs the main guessing game function, "See your statistics" which tracks amount of bad guesses, games won, games lost, etc. 
