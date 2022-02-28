@@ -2,9 +2,9 @@ import random
 
 
 with open("Word_list.txt","r") as File: 
-    lines = File.readlines()
+    lines = File.read().splitlines()
 
-
+print(lines)
 
 def guess_parser(guess_string, random_word):
     return_string = "*****"
@@ -35,14 +35,21 @@ def getUserRes():
         return getUserRes()
 
 def gamefunc(random_word):
+    game_state_over = 0
     print("Guess the 5 letter word")
     print("*****")
-    guess = input("Guess: " + "\n")
-    if len(guess) == 5 and guess in lines:
-        guess_parser(guess, random_word)
-    else:
-        print("Please input a 6 letter word that is a part of the word list.")
- 
+    while game_state_over == 0:
+        for x in range(6):
+            guess = input("Guess: ")
+            print(random_word)
+            if len(guess) == 5 and guess in lines:
+                guess_parser(guess, random_word)
+                if guess == random_word:
+                    game_state_over =+ 1
+            else:
+                print("Please input a 5 letter word that is a part of the word list.")
+    print("Congratulations on beating the Wordle!")
+
 def statistics():
     pass
 

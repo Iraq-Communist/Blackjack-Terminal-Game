@@ -15,10 +15,12 @@ Brainstorm :
 
 	* After each guess there should be a function ran within the main guessing game that uses string method logic to identify key letters, and to see if they are in the same index as the chosen mystery word; if it identifies the key letters but the indexes between the guess and the word don't match, it should tell the user that the letter they guessed was right, but not in the correct place. CHECK
 
+	* Ensure guesses are exactly 5 characters long CHECK
+
+	* Ensure guesses are inside the legal word list. CHECK
+
 
 To Do: 
 	* Implement control flow to: 
-								* Ensure guesses are exactly 5 characters long
-								* Ensure guesses are inside the legal word list.
 								* After each guess it should output a "help" string with 5 asteriks with the letters they guessed exactly correctly to show them where they guessed right, and a sentence next to it that tells them what letters they guessed right but placed wrongly. 
 								* Implement a statistics function that counts up all of the: Games won, Games Lost, Winrate, and Average amount of guesses
