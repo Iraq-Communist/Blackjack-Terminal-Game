@@ -1,12 +1,9 @@
 import random
 
 
-
-#File = open("Word_list.txt")
-#lines = File.readlines() 
-
-#Random_Word = random. randint(1,2317)
-random_word = "plonk"
+with open("Word_list.txt","r") as File: 
+    lines = File.readlines()
+random_word = random.choice(lines)
 
 
 def guess_parser(guess_string, random_word):
@@ -19,7 +16,7 @@ def guess_parser(guess_string, random_word):
             print("The letter "+ letter + " shows up in the mystery word, but you placed it incorrectly.")
     return return_string
 
-print(guess_parser("poium", random_word))
+
 
 
 def main_menu():
@@ -42,5 +39,20 @@ def getUserRes():
 def gamefunc(random_word):
     print("Guess the 5 letter word")
     print("*****")
-    guess = input("Guess:")
-    guessparser(guess)
+    guess = input("Guess: ")
+    guess_parser(guess, random_word)
+ 
+def statistics():
+    pass
+
+while 1==1:
+    main_menu()
+    userRes = getUserRes()
+    if userRes == "1":
+        gamefunc(random_word)
+
+    elif userRes == "2":
+        statistics()
+    elif userRes == "3":
+        print("Goodbye")
+        exit()
