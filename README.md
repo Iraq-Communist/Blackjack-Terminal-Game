@@ -1,7 +1,7 @@
 # Wordle-Terminal-Game
 Portfolio Project for "Introduction to Programming 101" Course on Codecademy. 
 
-Brainstorm : 
+Tasks Completed : 
 
 	* A .txt file containing the same word bank as the original NYT Wordle Game CHECK
 
