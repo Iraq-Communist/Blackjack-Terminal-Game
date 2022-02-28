@@ -3,7 +3,7 @@ import random
 
 with open("Word_list.txt","r") as File: 
     lines = File.readlines()
-random_word = random.choice(lines)
+
 
 
 def guess_parser(guess_string, random_word):
@@ -15,8 +15,6 @@ def guess_parser(guess_string, random_word):
         elif letter in random_word:
             print("The letter "+ letter + " shows up in the mystery word, but you placed it incorrectly.")
     return return_string
-
-
 
 
 def main_menu():
@@ -39,8 +37,11 @@ def getUserRes():
 def gamefunc(random_word):
     print("Guess the 5 letter word")
     print("*****")
-    guess = input("Guess: ")
-    guess_parser(guess, random_word)
+    guess = input("Guess: " + "\n")
+    if len(guess) == 5 and guess in lines:
+        guess_parser(guess, random_word)
+    else:
+        print("Please input a 6 letter word that is a part of the word list.")
  
 def statistics():
     pass
@@ -49,6 +50,7 @@ while 1==1:
     main_menu()
     userRes = getUserRes()
     if userRes == "1":
+        random_word = random.choice(lines)
         gamefunc(random_word)
 
     elif userRes == "2":
