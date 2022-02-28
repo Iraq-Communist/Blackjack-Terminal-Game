@@ -2,6 +2,7 @@
 Portfolio Project for "Introduction to Programming 101" Course on Codecademy. 
 
 Brainstorm : 
+
 	* A .txt file containing the same word bank as the original NYT Wordle Game CHECK
 
 	* first function initialises the game, welcomes the player, and picks a word at random from the word bank, which is on a differnet file. It saves it to a variable. CHECK
@@ -17,8 +18,12 @@ Brainstorm :
 
 
 To Do: 
-	* Implement control flow to: 
-								* Ensure guesses are exactly 5 characters long
-								* Ensure guesses are inside the legal word list.
-								* After each guess it should output a "help" string with 5 asteriks with the letters they guessed exactly correctly to show them where they guessed right, and a sentence next to it that tells them what letters they guessed right but placed wrongly. 
-								* Implement a statistics function that counts up all of the: Games won, Games Lost, Winrate, and Average amount of guesses
+
+	* Ensure guesses are exactly 5 characters long
+	* 
+	* Ensure guesses are inside the legal word list.
+	
+	* After each guess it should output a "help" string with 5 asteriks with the letters they guessed exactly correctly to show them where they guessed right, and a sentence next to it that tells them what letters they guessed right but placed wrongly. 
+	
+	* Implement a statistics function that counts up all of the: Games won, Games Lost, Winrate, and Average amount of guesses
+	
