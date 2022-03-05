@@ -44,7 +44,6 @@ def gamefunc(random_word):
     print("*****")
     while game_won == False and rounds_played < 6:
             guess = input("Guess: ")
-            print(random_word)
             if len(guess) == 5 and guess in lines:
                 rounds_played += 1
                 guess_parser(guess, random_word)
