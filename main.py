@@ -1,21 +1,22 @@
 import random
 
-
 with open("Word_list.txt","r") as File: 
     lines = File.read().splitlines()
 
-print(lines)
+games_won = 0
+games_lost = 0
+games_played = 0
 
 def guess_parser(guess_string, random_word):
     return_string = "*****"
-    str = guess_string
-    for index, letter in enumerate(str): 
-        if letter in random_word and str[index] == random_word[index]:
+    for index, letter in enumerate(guess_string): 
+        if letter in random_word and guess_string[index] == random_word[index]:
             return_string = return_string[:index] + letter + return_string[index+1:]
         elif letter in random_word:
             print("The letter "+ letter + " shows up in the mystery word, but you placed it incorrectly.")
-    return return_string
-
+            
+    print(return_string)
+    return
 
 def main_menu():
     print("*"*90)
@@ -35,28 +36,44 @@ def getUserRes():
         return getUserRes()
 
 def gamefunc(random_word):
-    game_state_over = 0
+    global games_lost
+    global games_won
+    rounds_played = 0 
+    game_won = False
     print("Guess the 5 letter word")
     print("*****")
-    while game_state_over == 0:
-        for x in range(6):
+    while game_won == False and rounds_played < 6:
             guess = input("Guess: ")
             print(random_word)
             if len(guess) == 5 and guess in lines:
+                rounds_played += 1
                 guess_parser(guess, random_word)
+                print("Rounds played: " + str(rounds_played))
                 if guess == random_word:
-                    game_state_over =+ 1
+                    game_won = True
+                    print("Wordle Complete!")
+                    print("Congratulations on beating the Wordle!")
+                    games_won += 1
             else:
                 print("Please input a 5 letter word that is a part of the word list.")
-    print("Congratulations on beating the Wordle!")
+    if game_won == False:
+        print("Game over, try again by pressing 1 in main menu! The word was " + random_word + ".")
+        games_lost += 1
 
 def statistics():
-    pass
+    print("*"*90)
+    print("Hello and welcome to the Statistics Section\n")
+    print("*"*90)
+    print("You have won " + str(games_won) + " games")
+    print("You have lost " + str(games_lost) + " games")
+    if games_played > 0:
+        print("Your winrate is " + str(games_won / games_played * 100) + " %")
 
-while 1==1:
+while True:
     main_menu()
     userRes = getUserRes()
     if userRes == "1":
+        games_played += 1
         random_word = random.choice(lines)
         gamefunc(random_word)
 
