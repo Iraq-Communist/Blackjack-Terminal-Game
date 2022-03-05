@@ -19,18 +19,21 @@ Tasks Completed :
 	* Ensure guesses are exactly 5 characters long CHECK
 
 	* Ensure guesses are inside the legal word list. CHECK
-
-
-To Do: 
-	* Implement control flow to: 
+	* Implement control flow to: CHECK
 								* After each guess it should output a "help" string with 5 asteriks with the letters they guessed exactly correctly to show them where they guessed right, and a sentence next to it that tells them what letters they guessed right but placed wrongly. 
-								* Implement a statistics function that counts up all of the: Games won, Games Lost, Winrate, and Average amount of guesses
-
+								* Implement a statistics function that counts up all of the: Games won, Games Lost, Winrate, and Average amount of guesses 
 	* Ensure guesses are exactly 5 characters long
-	* 
+	
 	* Ensure guesses are inside the legal word list.
 	
 	* After each guess it should output a "help" string with 5 asteriks with the letters they guessed exactly correctly to show them where they guessed right, and a sentence next to it that tells them what letters they guessed right but placed wrongly. 
 	
 	* Implement a statistics function that counts up all of the: Games won, Games Lost, Winrate, and Average amount of guesses
+	
+
+
+To Do: 
+	* Nothing :)
+	
+
 	
