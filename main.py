@@ -20,7 +20,7 @@ def guess_parser(guess_string, random_word):
 
 def main_menu():
     print("*"*90)
-    print("Hello and welcome to the Terminal Wordle Game!\n")
+    print("Hello and welcome to the Terminal Wordle Game!")
     print("*"*90)
     print("Here are all the services we offer:\n")
     print("1) Play Wordle")
